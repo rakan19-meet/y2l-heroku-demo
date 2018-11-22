@@ -1,14 +1,10 @@
 from flask import Flask
 app = Flask(__name__)
 
-background-color: "blue"
 
-@app.route('/')
-def zimbabwi():
-    return 'welcome to Zimbabwi'
-
-
-
+@app.route('/my_app')
+def hello_world:
+	return render_template("my_app.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
